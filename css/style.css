@@ -1,0 +1,64 @@
+/*Base classes*/
+.d-inline-block {
+	display: inline-block;
+}
+
+.title-absoluturi {
+	font-family: 'Sansita Swashed', cursive;
+}
+.title-relatiuri {
+	font-family: 'Roboto';
+	font-style: italic;
+	text-transform: capitalize;
+}
+.test1 {
+	text-indent: 50px;
+	letter-spacing: 3px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.5;
+}
+.test .text {
+	color: aqua;
+}
+.test.text {
+	color: red;
+}
+.divider {
+	width: 2px;
+	height: 30px;
+	background-color: blue;
+	display: inline-block;
+	margin: 0 35px;
+}
+
+
+.section-test,
+.section-test2{
+	display: inline-block;
+}
+
+
+.section-test2::before {
+	content: "GEOLAB";
+	font-size: 25px;
+	background: yellow;
+}
+.section-test2::after {
+	content: url('../img/smiley.gif');
+}
+
+.fb2::before {
+	content: '';
+	width: 2px;
+	height: 30px;
+	background-color: blue;
+	display: inline-block;
+	margin: 0 35px;
+}
+.footer-wraperr {
+	margin-left: 30px;
+}
+.fb::after {
+	content: ' \00A9';
+}
