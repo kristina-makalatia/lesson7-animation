@@ -1,64 +1,63 @@
-/*Base classes*/
-.d-inline-block {
-	display: inline-block;
+.box-wraper {
+	width: 400px;
+	height: 400px;
+	background-color: yellow;
+	position: relative;
+/*	transition-property: all;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transition-delay: 0.5s;*/
+	transition: all 0.5s linear 0.5s;	
 }
+.box-child {
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/*transform: translate(-50%,-50%) rotate(45deg);*/
+	transition: all 0.5s linear 0.5s;
+	animation: myanimation 2s infinite;	
+}
+.text-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.box-wraper:hover {
+	background-color: red;
+}
+.box-child:hover {
+	transform: translate(-50%,-50%) rotate(0deg);
+}
+/*.box-child:hover {
+	background-color: blue;
+}*/
 
-.title-absoluturi {
-	font-family: 'Sansita Swashed', cursive;
-}
-.title-relatiuri {
-	font-family: 'Roboto';
-	font-style: italic;
-	text-transform: capitalize;
-}
-.test1 {
-	text-indent: 50px;
-	letter-spacing: 3px;
-	font-style: italic;
-	font-weight: 400;
-	line-height: 1.5;
-}
-.test .text {
-	color: aqua;
-}
-.test.text {
+/*.box-wraper:hover .box-child {
+	background: black;
+}*/
+.test1{ 
 	color: red;
-}
-.divider {
-	width: 2px;
-	height: 30px;
-	background-color: blue;
+	transition: all 0.5s linear 0.5s;
 	display: inline-block;
-	margin: 0 35px;
+
+}
+.test1:hover {
+	color: aqua;
+	cursor: pointer;
+	opacity: 0.2;
+
 }
 
+/*keyframes*/
+@keyframes myanimation {
+   0%   {top: 0px; left: 0px; background: red; transform:rotate(0deg);}
+  25%  {top: 0px; left: 500px; background: blue; transform:rotate(45deg)}
+  50%  {top: 100px; left: 500px; background: yellow; transform:rotate(90deg)};
+  75%  {top: 100px; left: 0px; background: green;transform:rotate(360deg);}
+  100% {top: 0px; left: 0px; background: red; transform:rotate(0deg);}
 
-.section-test,
-.section-test2{
-	display: inline-block;
-}
-
-
-.section-test2::before {
-	content: "GEOLAB";
-	font-size: 25px;
-	background: yellow;
-}
-.section-test2::after {
-	content: url('../img/smiley.gif');
-}
-
-.fb2::before {
-	content: '';
-	width: 2px;
-	height: 30px;
-	background-color: blue;
-	display: inline-block;
-	margin: 0 35px;
-}
-.footer-wraperr {
-	margin-left: 30px;
-}
-.fb::after {
-	content: ' \00A9';
 }
